@@ -29,6 +29,11 @@ const menuItems = [
     href: '/services/plants'
   },
   {
+    title: '採用情報',
+    dropdownItems: ['募集職種', '働く環境', '採用フロー'],
+    href: '/careers'
+  },
+  {
     title: '会社案内',
     dropdownItems: ['会社概要', 'アクセス', 'お問い合わせ'],
     href: '/company/about'

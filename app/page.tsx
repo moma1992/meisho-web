@@ -6,6 +6,7 @@ import { FirstDivision } from '@/components/services/first-division';
 import { SecondDivision } from '@/components/services/second-division';
 import { ThirdDivision } from '@/components/services/third-division';
 import { PlantsSection } from '@/components/services/plants-section';
+import { CareersSection } from '@/components/careers-section';
 import { ContactSection } from '@/components/contact-section';
 import { Footer } from '@/components/footer/footer';
 import { SectionNav } from '@/components/section-nav';
@@ -30,6 +31,9 @@ export default function HomePage() {
         <section id="plants" className="h-screen w-full snap-start">
           <PlantsSection />
         </section>
+        <section id="careers" className="h-screen w-full snap-start">
+          <CareersSection />
+        </section>
         <section id="contact" className="w-full snap-start">
           <ContactSection />
         </section>
@@ -44,6 +48,7 @@ export default function HomePage() {
           { id: 'second', label: '第二事業部' },
           { id: 'third', label: '第三事業部' },
           { id: 'plants', label: '胡蝶蘭・観葉植物' },
+          { id: 'careers', label: '採用情報' },
           { id: 'contact', label: 'お問い合わせ' },
         ]}
       />
