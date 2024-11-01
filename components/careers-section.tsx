@@ -96,13 +96,17 @@ export function CareersSection() {
 
         <div className="absolute inset-0 lg:relative lg:col-start-2">
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[8px] lg:hidden" />
-          <Image
-            src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80"
-            alt="トラックドライバー"
-            fill
-            className="object-cover"
-            priority
-          />
+          <div className="relative h-full w-full">
+            <Image
+              src="/images/truck-driver.jpg"
+              alt="トラックドライバー"
+              layout="fill"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              priority
+              quality={85}
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
         </div>
       </div>
