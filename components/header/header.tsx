@@ -10,32 +10,32 @@ import { ContactBar } from './contact-bar';
 const menuItems = [
   {
     title: '第一事業部',
-    dropdownItems: ['事業概要', '実績紹介', 'サービス内容'],
+    dropdownItems: ['事業概要'],
     href: '/services/first-division'
   },
   {
     title: '第二事業部',
-    dropdownItems: ['事業概要', '製品一覧', 'サポート'],
+    dropdownItems: ['事業概要'],
     href: '/services/second-division'
   },
   {
     title: '第三事業部',
-    dropdownItems: ['事業概要', '技術紹介', '開発実績'],
+    dropdownItems: ['事業概要'],
     href: '/services/third-division'
   },
   {
     title: '胡蝶蘭・観葉植物販売',
-    dropdownItems: ['商品一覧', '納入実績', 'ご注文方法'],
+    dropdownItems: ['事業概要'],
     href: '/services/plants'
   },
   {
     title: '採用情報',
-    dropdownItems: ['募集職種', '働く環境', '採用フロー'],
+    dropdownItems: ['募集職種'],
     href: '/careers'
   },
   {
     title: '会社案内',
-    dropdownItems: ['会社概要', 'アクセス', 'お問い合わせ'],
+    dropdownItems: ['会社概要'],
     href: '/company/about'
   }
 ];
