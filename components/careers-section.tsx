@@ -97,7 +97,7 @@ export function CareersSection() {
         <div className="absolute inset-0 lg:relative lg:col-start-2">
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[8px] lg:hidden" />
           <Image
-            src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80"
+            src="images/careers-bg.jpg"
             alt="トラックドライバー"
             fill
             className="object-cover"

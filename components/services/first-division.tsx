@@ -97,7 +97,7 @@ export function FirstDivision() {
         <div className="absolute inset-0 lg:relative lg:col-start-2">
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[8px] lg:hidden" />
           <Image
-            src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80"
+            src="/images/first-div-bg.jpg"
             alt="建設機械の輸送"
             fill
             className="object-cover"

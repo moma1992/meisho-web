@@ -19,7 +19,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="relative h-full w-full">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&q=80"
+            src="/images/hero.jpg"
             alt="建設現場の風景"
             fill
             className="object-cover"

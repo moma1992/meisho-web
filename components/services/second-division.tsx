@@ -36,7 +36,7 @@ export function SecondDivision() {
         <div className="absolute inset-0 lg:relative lg:col-start-1">
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[8px] lg:hidden" />
           <Image
-            src="https://images.unsplash.com/photo-1583753075968-1236ccb83c66?auto=format&fit=crop&q=80"
+            src="/images/second-div-bg.jpg"
             alt="業務用厨房機器"
             fill
             className="object-cover"
