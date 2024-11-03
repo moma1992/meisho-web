@@ -11,7 +11,7 @@ const ThirdDivisionPage = () => {
       <div className="max-w-5xl mx-auto px-4 pt-32 pb-12">
         {/* ヒーローセクション */}
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-3 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)] [text-shadow:0_1px_2px_rgba(0,0,0,0.1)]">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)] [text-shadow:0_1px_2px_rgba(0,0,0,0.1)]">
             環境に配慮した、
             <br />
             確実な産業廃棄物処理。
