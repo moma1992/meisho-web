@@ -1,48 +1,47 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 import { AnimatedLogo } from './animated-logo';
 import { ContactBar } from './contact-bar';
 
 const menuItems = [
   {
-    title: '第一事業部',
-    dropdownItems: ['事業概要'],
-    href: '/services/first-division'
-  },
-  {
-    title: '第二事業部',
-    dropdownItems: ['事業概要'],
-    href: '/services/second-division'
-  },
-  {
-    title: '第三事業部',
-    dropdownItems: ['事業概要'],
-    href: '/services/third-division'
+    title: '事業部紹介',
+    dropdownItems: [
+      { name: '第一事業部', href: '/services/first-division' },
+      { name: '第二事業部', href: '/services/second-division' },
+      { name: '第三事業部', href: '/services/third-division' }
+    ]
   },
   {
     title: '胡蝶蘭・観葉植物販売',
-    dropdownItems: ['事業概要'],
-    href: '/services/plants'
+    dropdownItems: [{ name: '事業概要', href: '/services/plants' }]
   },
   {
     title: '採用情報',
-    dropdownItems: ['募集職種'],
-    href: '/careers'
+    dropdownItems: [{ name: '募集職種', href: '/careers' }]
   },
   {
     title: '会社案内',
-    dropdownItems: ['会社概要'],
-    href: '/company/about'
+    dropdownItems: [{ name: '会社概要', href: '/company/about' }]
   }
 ];
 
 export function Header() {
+  const [mounted, setMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <header className="fixed top-0 z-50 w-full">
@@ -88,10 +87,10 @@ export function Header() {
                           {item.dropdownItems.map((dropdownItem, dropIndex) => (
                             <a
                               key={dropIndex}
-                              href={`${item.href}#${dropdownItem}`}
+                              href={dropdownItem.href}
                               className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                             >
-                              {dropdownItem}
+                              {dropdownItem.name}
                             </a>
                           ))}
                         </div>
@@ -160,10 +159,10 @@ export function Header() {
                           {item.dropdownItems.map((dropdownItem, dropIndex) => (
                             <a
                               key={dropIndex}
-                              href={`${item.href}#${dropdownItem}`}
+                              href={dropdownItem.href}
                               className="block rounded-md px-3 py-2 text-base text-gray-700 hover:bg-blue-50 hover:text-blue-600"
                             >
-                              {dropdownItem}
+                              {dropdownItem.name}
                             </a>
                           ))}
                         </motion.div>

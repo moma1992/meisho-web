@@ -1,10 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
-import { RootLayoutProvider } from '@/components/layout/root-layout-provider';
-import { Toaster } from '@/components/ui/toaster';
-import { FloatingContact } from '@/components/floating-contact';
-import { OpeningAnimation } from '@/components/opening-animation';
+import { RootLayoutProvider } from '../components/layout/root-layout-provider';
+import { FloatingContact } from '../components/floating-contact';
+import { Toaster } from '../components/ui/toaster';
 
 const notoSansJP = Noto_Sans_JP({ 
   subsets: ['latin'],
@@ -41,7 +40,6 @@ export default function RootLayout({
     <html lang="ja" className={notoSansJP.variable} suppressHydrationWarning>
       <body className={notoSansJP.className} suppressHydrationWarning>
         <RootLayoutProvider>
-          <OpeningAnimation />
           {children}
           <FloatingContact />
         </RootLayoutProvider>

@@ -7,9 +7,12 @@ export function OpeningAnimation() {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
+    console.log('OpeningAnimation mounted, isVisible:', isVisible);
     const timer = setTimeout(() => {
+      console.log('Setting isVisible to false');
       setIsVisible(false);
     }, 4000);
+    
     return () => clearTimeout(timer);
   }, []);
 
@@ -50,7 +53,8 @@ export function OpeningAnimation() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-white to-gray-50 overflow-hidden"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-b from-white to-gray-50 overflow-hidden"
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
         >
           <div className="relative w-full max-w-2xl">
             {/* Main Logo */}

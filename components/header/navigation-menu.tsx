@@ -105,6 +105,16 @@ const ListItem = React.forwardRef<
 ListItem.displayName = "ListItem";
 
 export function MainNav() {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
