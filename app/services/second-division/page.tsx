@@ -1,144 +1,103 @@
-"use client";
+import React from 'react';
+import { Store, ShieldCheck, Wrench, Award, CheckCircle, MessageSquare } from 'lucide-react';
+import { Header } from '@/components/header/header';
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { ShoppingCart, Truck, Wrench } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Header } from "@/components/header/header";
-import { Footer } from "@/components/footer/footer";
-
-const services = [
-  {
-    icon: ShoppingCart,
-    title: "業務用機器販売",
-    description: "ホシザキ製品を中心とした高品質な業務用機器の提案・販売",
-  },
-  {
-    icon: Truck,
-    title: "搬入・配送",
-    description: "安全かつ確実な機器の搬入・配送サービス",
-  },
-  {
-    icon: Wrench,
-    title: "設置・メンテナンス",
-    description: "専門技術者による設置工事とアフターフォロー",
-  },
-];
-
-const equipmentExamples = [
-  {
-    title: "業務用冷蔵庫",
-    description: "省エネ性能に優れた最新の業務用冷蔵庫",
-    image: "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&q=80&w=1200",
-  },
-  {
-    title: "製氷機",
-    description: "衛生的で信頼性の高い製氷機",
-    image: "https://images.unsplash.com/photo-1583753075968-1236ccb83c66?auto=format&fit=crop&q=80&w=1200",
-  },
-  {
-    title: "厨房機器",
-    description: "プロ仕様の高性能厨房機器",
-    image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1200",
-  },
-];
-
-export default function SecondDivisionPage() {
+const EquipmentSalesPage = () => {
   return (
     <>
       <Header />
-      <main className="container mx-auto px-4 py-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 text-center"
-        >
-          <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl">
-            第二事業部
+      <div className="max-w-5xl mx-auto px-4 pt-32 pb-12">
+        {/* ヒーローセクション */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-3 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.15)] [text-shadow:0_1px_2px_rgba(0,0,0,0.1)]">
+            厨房機器のプロフェッショナルが、
+            <br />
+            販売から設置までワンストップで。
           </h1>
-          <p className="mt-4 text-xl text-muted-foreground">
-            業務用機器の販売から搬入・設置まで、トータルサポートを提供します。
+          
+          <p className="text-lg text-gray-200 max-w-3xl mx-auto leading-[1.8] tracking-wide">
+            業務用厨房機器の販売・搬入・設置まで一括して対応。
+            ホシザキ京阪の正規代理店として、高品質な製品と確かな技術で、
+            お客様の理想的な厨房環境の実現をサポートします。
           </p>
-        </motion.div>
-
-        <div className="grid gap-12 lg:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-8"
-          >
-            <Card className="overflow-hidden">
-              <CardContent className="p-6">
-                <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
-                  第二事業部では、ホシザキ京阪株式会社の代理店として、業務用機器の販売から搬入、設置まで一貫したサービスを提供しています。
-                  お客様のニーズに合わせた最適な機器の選定と、確かな技術力による安心の設置工事を実現します。
-                </p>
-              </CardContent>
-            </Card>
-
-            <div className="grid gap-6">
-              {services.map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                >
-                  <Card className="overflow-hidden transition-all duration-300 hover:shadow-lg">
-                    <CardContent className="flex items-start gap-4 p-6">
-                      <div className="rounded-lg bg-primary/10 p-3">
-                        <service.icon className="h-6 w-6 text-primary" />
-                      </div>
-                      <div className="space-y-1">
-                        <h3 className="font-semibold">{service.title}</h3>
-                        <p className="text-sm text-muted-foreground">
-                          {service.description}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-6 rounded-lg bg-muted/50 p-6"
-          >
-            {equipmentExamples.map((example, index) => (
-              <motion.div
-                key={example.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                className="relative aspect-video overflow-hidden rounded-lg"
-              >
-                <Image
-                  src={example.image}
-                  alt={example.title}
-                  fill
-                  className="object-cover transition-transform duration-300 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  priority={index === 0}
-                />
-                <div className="absolute inset-0 bg-black/40">
-                  <div className="flex h-full flex-col items-center justify-center p-4 text-center">
-                    <h3 className="mb-2 text-2xl font-bold text-white">{example.title}</h3>
-                    <p className="text-sm text-gray-200">{example.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
-      </main>
-      <Footer />
+
+        {/* サービスカード */}
+        <div className="grid md:grid-cols-3 gap-4 mb-8">
+          <div className="bg-white p-3 rounded-lg shadow hover:shadow-md transition-shadow duration-200">
+            <div className="bg-blue-100 p-2 rounded-full w-10 h-10 flex items-center justify-center mb-2">
+              <Store className="text-blue-600 w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold mb-1 text-gray-900">業務用機器販売</h3>
+            <p className="text-sm text-gray-600">製氷機、冷凍冷蔵庫など幅広い厨房機器を取り扱い</p>
+          </div>
+
+          <div className="bg-white p-3 rounded-lg shadow hover:shadow-md transition-shadow duration-200">
+            <div className="bg-green-100 p-2 rounded-full w-10 h-10 flex items-center justify-center mb-2">
+              <Wrench className="text-green-600 w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold mb-1 text-gray-900">搬入・設置</h3>
+            <p className="text-sm text-gray-600">複雑な搬入経路にも対応する専門的な設置サービス</p>
+          </div>
+
+          <div className="bg-white p-3 rounded-lg shadow hover:shadow-md transition-shadow duration-200">
+            <div className="bg-purple-100 p-2 rounded-full w-10 h-10 flex items-center justify-center mb-2">
+              <ShieldCheck className="text-purple-600 w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold mb-1 text-gray-900">正規代理店</h3>
+            <p className="text-sm text-gray-600">ホシザキ京阪の正規代理店として高品質な製品を提供</p>
+          </div>
+        </div>
+
+        {/* 強みセクション */}
+        <div className="bg-gray-50 p-4 rounded-lg">
+          <h2 className="text-xl font-bold mb-4 flex items-center text-gray-900">
+            <Award className="mr-2" />
+            当社の強み
+          </h2>
+          
+          <div className="space-y-2">
+            <div className="flex items-start hover:bg-white rounded transition-colors duration-200">
+              <CheckCircle className="text-green-500 mt-1 mr-2 flex-shrink-0 w-4 h-4" />
+              <div>
+                <h3 className="font-bold mb-0.5 text-gray-900 text-sm">ワンストップソリューション</h3>
+                <p className="text-sm text-gray-600">販売から搬入、設置まで一括して対応し、追加費用の心配もなく安心してご利用いただけます</p>
+              </div>
+            </div>
+
+            <div className="flex items-start hover:bg-white rounded transition-colors duration-200">
+              <CheckCircle className="text-green-500 mt-1 mr-2 flex-shrink-0 w-4 h-4" />
+              <div>
+                <h3 className="font-bold mb-0.5 text-gray-900 text-sm">豊富な取扱製品</h3>
+                <p className="text-sm text-gray-600">製氷機、冷凍冷蔵庫、食器洗浄機、ビールディスペンサーなど、世界トップシェアの製品を提供</p>
+              </div>
+            </div>
+
+            <div className="flex items-start hover:bg-white rounded transition-colors duration-200">
+              <CheckCircle className="text-green-500 mt-1 mr-2 flex-shrink-0 w-4 h-4" />
+              <div>
+                <h3 className="font-bold mb-0.5 text-gray-900 text-sm">専門的な設置技術</h3>
+                <p className="text-sm text-gray-600">複雑な搬入経路や設置環境にも対応できる、熟練スタッフによる確実な設置作業を実施</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* フローティングお問い合わせボタン */}
+        <div className="fixed left-0 top-1/2 -translate-y-1/2 z-50">
+          <a
+            href="/contact"
+            className="flex items-center bg-blue-600 text-white px-4 py-8 rounded-r-lg hover:bg-blue-700 transition-colors shadow"
+          >
+            <span className="[writing-mode:vertical-rl] font-semibold flex items-center">
+              <MessageSquare className="w-5 h-5 mb-2" />
+              お問い合わせ
+            </span>
+          </a>
+        </div>
+      </div>
     </>
   );
-}
+};
+
+export default EquipmentSalesPage;
