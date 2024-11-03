@@ -8,12 +8,12 @@ import {
   Mail, 
   MapPin, 
   Truck, 
-  ArrowRight,
+  MessageSquare,
   Building2,
   ExternalLink
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '../../components/ui/button';
+import { Card, CardContent } from '../../components/ui/card';
 
 export default function ContactPage() {
   const [isButtonVisible, setIsButtonVisible] = useState(true);
@@ -135,17 +135,17 @@ export default function ContactPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="pt-4"
+              className="fixed left-0 top-1/2 -translate-y-1/2 z-50"
             >
-              <Button
-                size="lg"
-                className="w-full bg-[#3b82f6] hover:bg-[#2563eb] text-white py-6 text-lg rounded-lg shadow-lg group"
+              <a
+                href="#"
+                className="flex items-center bg-blue-600 text-white px-4 py-12 rounded-r-lg hover:bg-blue-700 transition-colors shadow-lg group"
               >
-                <span className="flex items-center justify-center gap-2">
-                  お問い合わせフォームへ
-                  <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <span className="[writing-mode:vertical-rl] font-semibold text-lg tracking-wider flex items-center gap-3">
+                  <MessageSquare className="w-6 h-6 rotate-0" />
+                  お問い合わせ
                 </span>
-              </Button>
+              </a>
             </motion.div>
           </div>
 
