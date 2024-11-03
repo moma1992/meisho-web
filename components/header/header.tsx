@@ -1,11 +1,10 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../../lib/utils';
 import { AnimatedLogo } from './animated-logo';
-import { ContactBar } from './contact-bar';
 
 const menuItems = [
   {
@@ -44,17 +43,15 @@ export function Header() {
   }
 
   return (
-    <header className="fixed top-0 z-50 w-full">
-      <ContactBar />
-
+    <header className="fixed top-0 z-50 w-full bg-white">
       <motion.div
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ type: "spring", stiffness: 260, damping: 20 }}
-        className="border-b bg-white/90 shadow-sm backdrop-blur-md"
+        className="border-b shadow-sm backdrop-blur-md"
       >
         <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex h-12 items-center justify-between"> {/* ヘッダーを細くするために高さを調整 */}
             <AnimatedLogo />
 
             {/* Desktop Navigation */}
