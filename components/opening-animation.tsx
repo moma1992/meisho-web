@@ -4,17 +4,30 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function OpeningAnimation() {
-  const [isVisible, setIsVisible] = useState(true);
+  // Initialize state based on localStorage, defaulting to false to prevent flash
+  const [isVisible, setIsVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    console.log('OpeningAnimation mounted, isVisible:', isVisible);
-    const timer = setTimeout(() => {
-      console.log('Setting isVisible to false');
-      setIsVisible(false);
-    }, 4000);
+    // Check if this is the first visit
+    const hasSeenAnimation = localStorage.getItem('hasSeenAnimation');
     
-    return () => clearTimeout(timer);
+    if (!hasSeenAnimation) {
+      setIsVisible(true);
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+        localStorage.setItem('hasSeenAnimation', 'true');
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+    
+    setMounted(true);
   }, []);
+
+  // Don't render anything until after hydration
+  if (!mounted && !isVisible) {
+    return null;
+  }
 
   // Path animation variants
   const pathVariants = {

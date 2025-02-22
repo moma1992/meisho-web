@@ -1,6 +1,7 @@
 import React from 'react';
 import { Store, ShieldCheck, Wrench, Award, CheckCircle, MessageSquare } from 'lucide-react';
 import { Header } from '@/components/header/header';
+import Image from 'next/image';
 
 const EquipmentSalesPage = () => {
   return (
@@ -79,6 +80,29 @@ const EquipmentSalesPage = () => {
                 <h3 className="font-bold mb-0.5 text-gray-900 text-sm">専門的な設置技術</h3>
                 <p className="text-sm text-gray-600">複雑な搬入経路や設置環境にも対応できる、熟練スタッフによる確実な設置作業を実施</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 配送車両セクション */}
+        <div className="mt-8">
+          <h2 className="text-xl font-bold mb-4 text-gray-900">配送車両</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/icetruck-side.png"
+                alt="配送車両 側面"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/icetruck-back.png"
+                alt="配送車両 後部"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

@@ -21,29 +21,29 @@ export default function HomePage() {
       <OpeningAnimation />
       <main className="relative">
         <Header />
-        <div className="h-screen w-full overflow-y-auto snap-y snap-mandatory">
-          <section id="home" className="h-screen w-full snap-start">
+        <div className="h-screen w-full overflow-y-auto">
+          <section id="home" className="min-h-screen w-full">
             <Hero />
           </section>
-          <section id="first" className="h-screen w-full snap-start">
+          <section id="first" className="min-h-screen w-full lg:h-screen">
             <FirstDivision />
           </section>
-          <section id="second" className="h-screen w-full snap-start">
+          <section id="second" className="min-h-screen w-full lg:h-screen">
             <SecondDivision />
           </section>
-          <section id="third" className="h-screen w-full snap-start">
+          <section id="third" className="min-h-screen w-full lg:h-screen">
             <ThirdDivision />
           </section>
-          <section id="plants" className="h-screen w-full snap-start">
+          <section id="plants" className="min-h-screen w-full lg:h-screen">
             <PlantsSection />
           </section>
-          <section id="careers" className="h-screen w-full snap-start">
+          <section id="careers" className="min-h-screen w-full lg:h-screen">
             <CareersSection />
           </section>
-          <section id="contact" className="w-full snap-start">
+          <section id="contact" className="w-full">
             <ContactSection />
           </section>
-          <section id="footer" className="w-full snap-start">
+          <section id="footer" className="w-full">
             <Footer />
           </section>
         </div>

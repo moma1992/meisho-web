@@ -33,8 +33,20 @@ export function PlantsSection() {
   return (
     <div ref={ref} className="relative min-h-screen">
       <div className="grid min-h-screen grid-cols-1 lg:grid-cols-2">
-        {/* Left Content Section */}
-        <div className="relative z-10 flex items-center px-4 py-24 lg:px-12">
+        {/* Image Section (Now on the left) */}
+        <div className="absolute inset-0 lg:relative lg:col-start-1">
+          <Image
+            src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&q=80"
+            alt="観葉植物"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40 lg:bg-black/45" />
+        </div>
+
+        {/* Content Section (Now on the right) */}
+        <div className="relative z-10 flex items-center px-4 py-24 lg:col-start-2 lg:px-12">
           <div className="w-full max-w-xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -65,7 +77,7 @@ export function PlantsSection() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-white">{service.title}</h3>
-                        <p className="text-sm text-gray-200">
+                        <p className="text-sm text-white/80">
                           {service.description}
                         </p>
                       </div>
@@ -93,18 +105,6 @@ export function PlantsSection() {
               </Button>
             </motion.div>
           </div>
-        </div>
-
-        {/* Right Image Section */}
-        <div className="absolute inset-0 lg:relative lg:col-start-2">
-          <Image
-            src="https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&q=80"
-            alt="観葉植物"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/40 lg:hidden" />
         </div>
       </div>
     </div>

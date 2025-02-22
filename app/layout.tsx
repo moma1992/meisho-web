@@ -4,6 +4,7 @@ import { Noto_Sans_JP } from 'next/font/google';
 import { RootLayoutProvider } from '../components/layout/root-layout-provider';
 import { FloatingContact } from '../components/floating-contact';
 import { Toaster } from '../components/ui/toaster';
+import { ImagePreloader } from '../components/image-preloader';
 
 const notoSansJP = Noto_Sans_JP({ 
   subsets: ['latin'],
@@ -40,8 +41,10 @@ export default function RootLayout({
     <html lang="ja" className={notoSansJP.variable} suppressHydrationWarning>
       <body className={notoSansJP.className} suppressHydrationWarning>
         <RootLayoutProvider>
-          {children}
-          <FloatingContact />
+          <ImagePreloader>
+            {children}
+            <FloatingContact />
+          </ImagePreloader>
         </RootLayoutProvider>
         <Toaster />
       </body>
