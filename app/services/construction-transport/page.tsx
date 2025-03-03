@@ -1,26 +1,26 @@
 import React from 'react';
-import { Truck, Shield, Clock, Award, CheckCircle } from 'lucide-react';
+import { Truck, Shield, Award, CheckCircle } from 'lucide-react';
 
 const ConstructionTransportPage = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* ヒーローセクション */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold mb-6">
+        <h1 className="text-4xl font-bold mb-6 text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
           プロの技術が支える、
           <br />
           建設機械の確実な輸送。
         </h1>
         
-        <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] max-w-3xl mx-auto leading-relaxed">
           私たちは、建設現場の大切なパートナーとして、
           豊富な車両と専門知識を活かした安全確実な輸送サービスを提供します。
-          24時間365日、お客様のニーズに柔軟に対応し、建設プロジェクトの成功をサポートします。
+          お客様のニーズに柔軟に対応し、建設プロジェクトの成功をサポートします。
         </p>
       </div>
 
       {/* サービスカード */}
-      <div className="grid md:grid-cols-3 gap-8 mb-16">
+      <div className="grid md:grid-cols-2 gap-8 mb-16">
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <div className="bg-blue-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
             <Truck className="text-blue-600 w-6 h-6" />
@@ -35,14 +35,6 @@ const ConstructionTransportPage = () => {
           </div>
           <h3 className="text-xl font-bold mb-2">安全性の追求</h3>
           <p className="text-gray-600">熟練ドライバーと徹底した安全管理で確実な輸送を実現</p>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <div className="bg-purple-100 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-            <Clock className="text-purple-600 w-6 h-6" />
-          </div>
-          <h3 className="text-xl font-bold mb-2">24時間対応</h3>
-          <p className="text-gray-600">緊急時も含め、年中無休で柔軟な輸送サービスを提供</p>
         </div>
       </div>
 

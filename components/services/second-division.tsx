@@ -12,7 +12,7 @@ const services = [
   {
     icon: ShoppingCart,
     title: "業務用機器販売",
-    description: "ホシザキ製品を中心とした高品質な機器の提案・販売",
+    description: "ホシザキ機器、他メーカー、ガス機器(マルゼン)等の高品質な機器の提案・販売",
   },
   {
     icon: Truck,
@@ -21,8 +21,13 @@ const services = [
   },
   {
     icon: Wrench,
-    title: "設置・メンテナンス",
-    description: "専門技術者による設置工事とアフターフォロー",
+    title: "設置・撤去・廃棄",
+    description: "専門技術者による設置工事",
+  },
+  {
+    icon: Truck,
+    title: "多様な輸送手段",
+    description: "3tユニック〜30tトレーラーまで豊富な方法での輸送",
   },
 ];
 
@@ -52,10 +57,10 @@ export function SecondDivision() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              <h2 className="text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:text-5xl">
                 第二事業部
               </h2>
-              <p className="mt-4 text-lg text-white/90 [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]">
+              <p className="mt-4 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
                 業務用機器の販売から搬入・設置まで、トータルサポートを提供します。
                 ホシザキ京阪株式会社の代理店として、高品質な製品と確かな技術力でお客様のニーズにお応えします。
               </p>
@@ -75,8 +80,8 @@ export function SecondDivision() {
                         <service.icon className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-white">{service.title}</h3>
-                        <p className="text-sm text-white/80">
+                        <h3 className="font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">{service.title}</h3>
+                        <p className="text-sm text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                           {service.description}
                         </p>
                       </div>

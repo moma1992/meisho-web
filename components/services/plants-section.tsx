@@ -53,10 +53,10 @@ export function PlantsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              <h2 className="text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:text-5xl">
                 胡蝶蘭・観葉植物販売
               </h2>
-              <p className="mt-4 text-lg text-gray-200">
+              <p className="mt-4 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
                 お祝いやお部屋の装飾に、美しい胡蝶蘭と観葉植物をご提供。
                 プロのフローリストが丁寧に育てた高品質な植物と、きめ細やかなアフターケアで、末永くお楽しみいただけます。
               </p>
@@ -76,8 +76,8 @@ export function PlantsSection() {
                         <service.icon className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-white">{service.title}</h3>
-                        <p className="text-sm text-white/80">
+                        <h3 className="font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">{service.title}</h3>
+                        <p className="text-sm text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                           {service.description}
                         </p>
                       </div>

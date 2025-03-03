@@ -14,14 +14,15 @@ import {
   Building2,
   Mail,
   Phone,
-  Printer
+  Printer,
+  Instagram
 } from 'lucide-react';
 
 const companyInfo = [
   { label: "会社名", value: "株式会社明翔" },
   { label: "代表取締役", value: "池田 祐子" },
   { label: "資本金", value: "800万円" },
-  { label: "従業員数", value: "17名" },
+  { label: "従業員数", value: "25名" },
   { label: "本社所在地", value: "〒590-0141 大阪府堺市南区桃山台2-3-4" },
   { label: "車庫", value: "〒590-0152 大阪府堺市南区和田295-1" },
 ];
@@ -42,6 +43,23 @@ const contactInfo = [
     tel: "072-298-6901",
     fax: "072-298-6902",
   },
+];
+
+const affiliatedShops = [
+  {
+    title: "スプレッドグリーン",
+    address: "〒594-1105 大阪府和泉市のぞみ野１丁目１２−３４",
+    tel: "0725-99-8815",
+    instagram: "@spreadgreen_",
+    instagramUrl: "https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ==",
+    hours: "月〜水,金〜日　11:00〜18:00（木曜日定休日）"
+  },
+  {
+    title: "jewelry&jail",
+    instagram: "@jewelry_jail",
+    instagramUrl: "https://www.instagram.com/jewelry_jail?igsh=cGFlNGRndGUxdG45",
+    hours: "月〜水,金〜日　20:00〜24:00（lo23:30 木曜日定休日）"
+  }
 ];
 
 export function CompanyAboutContent() {
@@ -163,6 +181,51 @@ export function CompanyAboutContent() {
                   </div>
                 </CardContent>
               </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <h2 className="mb-6 text-2xl font-bold">関連店舗</h2>
+              <div className="grid gap-6 md:grid-cols-2">
+                {affiliatedShops.map((shop) => (
+                  <Card key={shop.title}>
+                    <CardContent className="p-6">
+                      <h3 className="mb-4 font-semibold">{shop.title}</h3>
+                      <div className="space-y-3 text-sm">
+                        {shop.address && (
+                          <div className="flex items-start gap-2">
+                            <Building2 className="mt-1 h-4 w-4 text-muted-foreground" />
+                            <span>{shop.address}</span>
+                          </div>
+                        )}
+                        {shop.tel && (
+                          <div className="flex items-center gap-2">
+                            <Phone className="h-4 w-4 text-muted-foreground" />
+                            <span>TEL: {shop.tel}</span>
+                          </div>
+                        )}
+                        <div className="flex items-center gap-2">
+                          <Instagram className="h-4 w-4 text-muted-foreground" />
+                          <a
+                            href={shop.instagramUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline dark:text-blue-400"
+                          >
+                            {shop.instagram}
+                          </a>
+                        </div>
+                        <div className="mt-2 text-muted-foreground">
+                          <p>{shop.hours}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>

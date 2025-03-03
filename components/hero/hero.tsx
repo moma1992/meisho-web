@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
-import Link from 'next/link'; // Linkコンポーネントをインポート
+import Link from 'next/link'; 
 
 export function Hero() {
   return (
@@ -24,7 +24,7 @@ export function Hero() {
       <div className="relative z-10 container mx-auto px-4 py-40 text-right">
         <div className="max-w-3xl ml-auto">
           {/* メインコピー */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] mb-6 leading-tight">
             まちの成長を支える
             <br />
             <span className="inline-block mt-2">
@@ -33,7 +33,7 @@ export function Hero() {
           </h1>
 
           {/* サブコピー */}
-          <div className="space-y-3 text-lg md:text-xl text-white/90 font-medium">
+          <div className="space-y-3 text-lg md:text-xl text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] font-medium">
             <p>建設機械運搬からレンタル・リース、</p>
             <p>産業廃棄物の収集運搬まで。</p>
             <p>多角的なサービスで地域社会の基盤を支え、</p>
@@ -75,9 +75,9 @@ export function Hero() {
       {/* スクロールインジケーター */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/80 animate-bounce">
         <div className="flex flex-col items-center gap-2">
-          <span className="text-sm font-medium">Scroll</span>
+          <span className="text-sm font-medium drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">Scroll</span>
           <svg 
-            className="w-8 h-8 transition-transform transform hover:scale-125 hover:rotate-12"
+            className="w-8 h-8 transition-transform transform hover:scale-125 hover:rotate-12 drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"

@@ -41,13 +41,13 @@ const positions = [
     image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80&w=1200",
   },
   {
-    title: "営業スタッフ",
+    title: "搬入•搬出スタッフ",
     department: "第二事業部",
     type: "正社員",
-    description: "業務用機器の販売・提案営業を担当していただきます。未経験者歓迎。",
+    description: "業務用機器の搬入•搬出を担当していただきます。未経験者歓迎。",
     requirements: [
       "普通自動車免許必須",
-      "営業経験者歓迎",
+      "体力に自信のある方",
       "コミュニケーション能力の高い方",
     ],
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200",

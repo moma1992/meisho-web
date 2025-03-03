@@ -40,10 +40,10 @@ export function CareersSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              <h2 className="text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:text-5xl">
                 採用情報
               </h2>
-              <p className="mt-4 text-lg text-gray-200">
+              <p className="mt-4 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
                 私たちは常に、情熱を持って働ける仲間を探しています。
                 あなたの経験と熱意を活かし、共に成長していける環境をご用意しています。
               </p>
@@ -63,8 +63,8 @@ export function CareersSection() {
                         <benefit.icon className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-white">{benefit.title}</h3>
-                        <p className="text-sm text-white/80">
+                        <h3 className="font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">{benefit.title}</h3>
+                        <p className="text-sm text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                           {benefit.description}
                         </p>
                       </div>

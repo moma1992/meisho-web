@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Truck, Shield, Clock, ArrowRight } from 'lucide-react';
+import { Truck, Shield, ArrowRight } from 'lucide-react';
 
 const services = [
   {
@@ -18,11 +18,6 @@ const services = [
     icon: Shield,
     title: "安全性の確保",
     description: "徹底した安全管理体制",
-  },
-  {
-    icon: Clock,
-    title: "24時間対応",
-    description: "緊急時の迅速なサポート",
   },
 ];
 
@@ -40,10 +35,10 @@ export function FirstDivision() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              <h2 className="text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:text-5xl">
                 第一事業部
               </h2>
-              <p className="mt-4 text-lg text-white/90 [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]">
+              <p className="mt-4 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
                 建設機械の専門的な知識と経験を活かし、迅速かつ安全な輸送サービスを提供します。
                 お客様のプロジェクトを成功へと導くパートナーとして、最適なソリューションを提案します。
               </p>
@@ -63,8 +58,8 @@ export function FirstDivision() {
                         <service.icon className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-white">{service.title}</h3>
-                        <p className="text-sm text-white/80">
+                        <h3 className="font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">{service.title}</h3>
+                        <p className="text-sm text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                           {service.description}
                         </p>
                       </div>

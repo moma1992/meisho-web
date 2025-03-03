@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Phone, Clock, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export function ContactSection() {
@@ -35,18 +35,6 @@ export function ContactSection() {
               <CardContent className="p-6">
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <Clock className="mt-1 h-6 w-6 text-primary" />
-                    <div>
-                      <h3 className="text-lg font-semibold">営業時間</h3>
-                      <ul className="mt-2 space-y-1 text-muted-foreground">
-                        <li className="font-medium text-foreground">月曜日 - 金曜日: 8:00 - 17:00</li>
-                        <li className="font-medium text-foreground">土曜日: 8:00 - 12:00</li>
-                        <li>日曜・祝日: 休業</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
                     <Phone className="mt-1 h-6 w-6 text-primary" />
                     <div>
                       <h3 className="text-lg font-semibold">お電話でのお問い合わせ</h3>
@@ -54,9 +42,6 @@ export function ContactSection() {
                         <a href="tel:072-298-6900" className="hover:underline">
                           072-298-6900
                         </a>
-                      </p>
-                      <p className="mt-1 text-sm text-muted-foreground">
-                        電話受付：平日 9時〜17時
                       </p>
                     </div>
                   </div>

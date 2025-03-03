@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Truck, Shield, Clock, ArrowRight } from 'lucide-react';
+import { Truck, Shield, ArrowRight } from 'lucide-react';
 import { Header } from '@/components/header/header';
 import { Footer } from '@/components/footer/footer';
 
@@ -20,11 +20,6 @@ const services = [
     icon: Shield,
     title: "安全性の確保",
     description: "徹底した安全管理体制",
-  },
-  {
-    icon: Clock,
-    title: "24時間対応",
-    description: "緊急時の迅速なサポート",
   },
 ];
 
@@ -44,12 +39,20 @@ export function FirstDivisionContent() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+                <h1 className="text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:text-5xl">
                   第一事業部
                 </h1>
-                <p className="mt-4 text-lg text-white/90 [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]">
+                <p className="mt-4 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
                   建設機械の専門的な知識と経験を活かし、迅速かつ安全な輸送サービスを提供します。
                   お客様のプロジェクトを成功へと導くパートナーとして、最適なソリューションを提案します。
+                </p>
+                
+                <p className="mt-8 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
+                  3tユニック〜30tトレーラーまで多様な車両を保有し、あらゆるお客様のニーズに柔軟にお応えします。
+                </p>
+                
+                <p className="mt-4 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
+                  回送サービスの一環として、状況に応じて建設機械のお預かりの対応も行なっております。
                 </p>
               </motion.div>
 
@@ -67,8 +70,8 @@ export function FirstDivisionContent() {
                           <service.icon className="h-5 w-5 text-white" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-white">{service.title}</h3>
-                          <p className="text-sm text-white/80">
+                          <h3 className="font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">{service.title}</h3>
+                          <p className="text-sm text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                             {service.description}
                           </p>
                         </div>
@@ -109,6 +112,25 @@ export function FirstDivisionContent() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
           </div>
+        </div>
+
+        {/* トラック画像セクション */}
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="mx-auto max-w-4xl overflow-hidden rounded-lg shadow-xl"
+          >
+            <div className="relative aspect-video w-full">
+              <Image
+                src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/track-kitchen.jpeg"
+                alt="建設機械輸送トラック"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </motion.div>
         </div>
       </div>
       <Footer />

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Flower, Gift, Leaf, Heart, ArrowRight } from "lucide-react";
+import { Flower, Gift, Leaf, Heart, ArrowRight, Instagram, MapPin, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
@@ -65,10 +65,10 @@ export function PlantsContent() {
           transition={{ duration: 0.5 }}
           className="mb-12 text-center"
         >
-          <h1 className="text-balance text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="text-balance text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:text-5xl">
             胡蝶蘭・観葉植物販売
           </h1>
-          <p className="mt-4 text-xl text-muted-foreground">
+          <p className="mt-4 text-xl text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
             お祝いやお部屋の装飾に、美しい胡蝶蘭と観葉植物をご提供
           </p>
         </motion.div>
@@ -139,9 +139,9 @@ export function PlantsContent() {
                 />
                 <div className="absolute inset-0 bg-black/40">
                   <div className="flex h-full flex-col items-center justify-center p-4 text-center">
-                    <h3 className="mb-2 text-2xl font-bold text-white">{product.title}</h3>
-                    <p className="mb-2 text-sm text-gray-200">{product.description}</p>
-                    <span className="rounded-full bg-white/20 px-4 py-1 text-sm text-white">
+                    <h3 className="mb-2 text-2xl font-bold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">{product.title}</h3>
+                    <p className="mb-2 text-sm text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">{product.description}</p>
+                    <span className="rounded-full bg-white/20 px-4 py-1 text-sm text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                       {product.category}
                     </span>
                   </div>
@@ -151,10 +151,140 @@ export function PlantsContent() {
           </motion.div>
         </div>
 
+        {/* Partner Shops Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
+          className="mt-16"
+        >
+          <h2 className="mb-8 text-2xl font-bold text-center">提携ショップ</h2>
+          
+          {/* SpreadGreen Information */}
+          <Card className="overflow-hidden border-2 border-green-100/20 mb-8">
+            <CardContent className="p-6">
+              <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
+                <div className="relative h-40 w-40 overflow-hidden rounded-lg">
+                  <Image
+                    src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/grennline.jpg"
+                    alt="SpreadGreen"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex-1 space-y-4 text-center md:text-left">
+                  <h3 className="text-2xl font-bold">スプレッドグリーン</h3>
+                  <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
+                    <MapPin className="h-5 w-5 shrink-0 text-primary" />
+                    <p className="text-muted-foreground">
+                      〒594-1105 大阪府和泉市のぞみ野１丁目１２−３４
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
+                    <Phone className="h-5 w-5 shrink-0 text-primary" />
+                    <p className="text-muted-foreground">
+                      0725-99-8815
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
+                    <Instagram className="h-5 w-5 shrink-0 text-primary" />
+                    <a
+                      href="https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ=="
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      @spreadgreen_
+                    </a>
+                  </div>
+                  <div className="flex justify-center md:justify-start">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="group border-primary/20 hover:border-primary/50 hover:bg-primary/5"
+                    >
+                      <a
+                        href="https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ=="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <Instagram className="h-4 w-4" />
+                        Instagramをフォロー
+                        <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          
+          {/* Jewelry & Jail Information */}
+          <Card className="overflow-hidden border-2 border-purple-100/20">
+            <CardContent className="p-6">
+              <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
+                <div className="relative h-40 w-40 overflow-hidden rounded-lg">
+                  <Image
+                    src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/j-rogo.jpg"
+                    alt="Jewelry & Jail Logo"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex-1 space-y-4 text-center md:text-left">
+                  <h3 className="text-2xl font-bold">jewelry&jail</h3>
+                  <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
+                    <Instagram className="h-5 w-5 shrink-0 text-primary" />
+                    <a
+                      href="https://www.instagram.com/jewelry_jail?igsh=cGFlNGRndGUxdG45"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      @jewelry_jail
+                    </a>
+                  </div>
+                  <div className="flex justify-center md:justify-start">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="group border-primary/20 hover:border-primary/50 hover:bg-primary/5"
+                    >
+                      <a
+                        href="https://www.instagram.com/jewelry_jail?igsh=cGFlNGRndGUxdG45"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <Instagram className="h-4 w-4" />
+                        Instagramをフォロー
+                        <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Add the menu image below */}
+              <div className="mt-6">
+                <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                  <Image
+                    src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/j-menu.jpg"
+                    alt="Jewelry & Jail Menu"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.7 }}
           className="mt-16 flex flex-col items-center gap-4"
         >
           <Button

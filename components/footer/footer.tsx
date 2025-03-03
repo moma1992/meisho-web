@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, MapPin, Phone, Printer, Facebook, Twitter, Instagram, Truck } from 'lucide-react';
+import { Mail, MapPin, Phone, Printer, Facebook, Twitter, Instagram, Truck, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -29,7 +29,7 @@ export function Footer() {
   return (
     <footer className="border-t bg-blue-950 text-gray-100">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <motion.div 
             {...fadeIn}
             className="flex flex-col items-center space-y-4 text-center md:items-start md:text-left"
@@ -41,6 +41,21 @@ export function Footer() {
             <p className="text-sm text-gray-300">
               産業基盤整備・都市づくりで地域社会に貢献する企業として
             </p>
+            <div className="flex justify-center space-x-4 md:justify-start">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    className="rounded-full bg-blue-900 p-2 transition-colors hover:bg-blue-800"
+                    aria-label={social.name}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                );
+              })}
+            </div>
           </motion.div>
 
           <motion.div 
@@ -87,26 +102,61 @@ export function Footer() {
             {...fadeIn}
             className="space-y-6 text-center md:text-left"
           >
-            <h3 className="text-xl font-semibold text-white">営業時間</h3>
-            <ul className="space-y-2">
-              <li>月曜日 - 金曜日: 8:00 - 17:00</li>
-              <li>土曜日: 8:00 - 12:00</li>
-              <li>日曜・祝日: 休業</li>
-            </ul>
-            <div className="flex justify-center space-x-4 md:justify-start">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    className="rounded-full bg-blue-900 p-2 transition-colors hover:bg-blue-800"
-                    aria-label={social.name}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </a>
-                );
-              })}
+            <h3 className="text-xl font-semibold text-white">スプレッドグリーン</h3>
+            <div className="space-y-2">
+              <div className="flex items-start space-x-3">
+                <Clock className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
+                <div className="space-y-1">
+                  <p>月〜水,金〜日　11:00〜18:00</p>
+                  <p className="text-sm text-gray-300">木曜日定休日</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
+                <p className="text-sm">〒594-1105 大阪府和泉市のぞみ野１丁目１２−３４</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Phone className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
+                <p className="text-sm">0725-99-8815</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Instagram className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
+                <a 
+                  href="https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-blue-400 transition-colors"
+                >
+                  @spreadgreen_
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            {...fadeIn}
+            className="space-y-6 text-center md:text-left"
+          >
+            <h3 className="text-xl font-semibold text-white">jewelry&jail</h3>
+            <div className="space-y-2">
+              <div className="flex items-start space-x-3">
+                <Clock className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
+                <div className="space-y-1">
+                  <p>月〜水,金〜日　20:00〜24:00</p>
+                  <p className="text-sm text-gray-300">(lo23:30) 木曜日定休日</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <Instagram className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
+                <a 
+                  href="https://www.instagram.com/jewelry_jail?igsh=cGFlNGRndGUxdG45"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:text-blue-400 transition-colors"
+                >
+                  @jewelry_jail
+                </a>
+              </div>
             </div>
           </motion.div>
         </div>

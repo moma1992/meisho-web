@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Recycle, Truck, Shield, ArrowRight } from 'lucide-react';
+import { Recycle, Truck, ArrowRight } from 'lucide-react';
 
 const services = [
   {
@@ -18,11 +18,6 @@ const services = [
     icon: Truck,
     title: "運搬サービス",
     description: "安全確実な廃棄物の運搬",
-  },
-  {
-    icon: Shield,
-    title: "適正処理",
-    description: "法令遵守による確実な処理",
   },
 ];
 
@@ -40,10 +35,10 @@ export function ThirdDivision() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
+              <h2 className="text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:text-5xl">
                 第三事業部
               </h2>
-              <p className="mt-4 text-lg text-white/90 [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]">
+              <p className="mt-4 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
                 産業廃棄物の適正処理を通じて、持続可能な社会の実現に貢献します。
                 法令遵守はもちろん、環境に配慮した廃棄物処理を実現し、循環型社会の形成に貢献します。
               </p>
@@ -63,8 +58,8 @@ export function ThirdDivision() {
                         <service.icon className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-white">{service.title}</h3>
-                        <p className="text-sm text-white/80">
+                        <h3 className="font-semibold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">{service.title}</h3>
+                        <p className="text-sm text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                           {service.description}
                         </p>
                       </div>

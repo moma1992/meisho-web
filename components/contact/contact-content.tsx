@@ -3,11 +3,10 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Clock, 
   Phone, 
   Mail, 
   MapPin, 
-  Truck, 
+  Truck,
   MessageSquare,
   Building2,
   ExternalLink
@@ -22,17 +21,9 @@ export function ContactContent() {
 
   const contactInfo = [
     {
-      icon: Clock,
-      title: "営業時間",
-      primary: "月曜日 - 金曜日: 8:00 - 17:00",
-      secondary: "土曜日: 8:00 - 12:00",
-      details: "日曜・祝日: 休業"
-    },
-    {
       icon: Phone,
       title: "お電話でのお問い合わせ",
       primary: "072-298-6900",
-      secondary: "電話受付: 平日 9時〜17時",
       href: "tel:0722986900"
     },
     {
@@ -87,7 +78,7 @@ export function ContactContent() {
             </h1>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               ご相談・ご質問等ございましたら、お気軽にお問い合わせください。
-              24時間体制で物流サービスに関するご相談を承っております。
+              物流サービスに関するご相談を承っております。
             </p>
           </motion.div>
 
@@ -123,9 +114,6 @@ export function ContactContent() {
                           )}
                           {item.secondary && (
                             <p className="text-gray-300 text-sm mt-1">{item.secondary}</p>
-                          )}
-                          {item.details && (
-                            <p className="text-gray-300 text-sm">{item.details}</p>
                           )}
                         </div>
                       </div>
