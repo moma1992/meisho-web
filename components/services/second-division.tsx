@@ -24,11 +24,6 @@ const services = [
     title: "設置・撤去・廃棄",
     description: "専門技術者による設置工事",
   },
-  {
-    icon: Truck,
-    title: "多様な輸送手段",
-    description: "3tユニック〜30tトレーラーまで豊富な方法での輸送",
-  },
 ];
 
 export function SecondDivision() {

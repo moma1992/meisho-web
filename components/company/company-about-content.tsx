@@ -52,13 +52,11 @@ const affiliatedShops = [
     tel: "0725-99-8815",
     instagram: "@spreadgreen_",
     instagramUrl: "https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ==",
-    hours: "月〜水,金〜日　11:00〜18:00（木曜日定休日）"
   },
   {
     title: "jewelry&jail",
     instagram: "@jewelry_jail",
     instagramUrl: "https://www.instagram.com/jewelry_jail?igsh=cGFlNGRndGUxdG45",
-    hours: "月〜水,金〜日　20:00〜24:00（lo23:30 木曜日定休日）"
   }
 ];
 
@@ -188,7 +186,6 @@ export function CompanyAboutContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <h2 className="mb-6 text-2xl font-bold">関連店舗</h2>
               <div className="grid gap-6 md:grid-cols-2">
                 {affiliatedShops.map((shop) => (
                   <Card key={shop.title}>
@@ -217,9 +214,6 @@ export function CompanyAboutContent() {
                           >
                             {shop.instagram}
                           </a>
-                        </div>
-                        <div className="mt-2 text-muted-foreground">
-                          <p>{shop.hours}</p>
                         </div>
                       </div>
                     </CardContent>

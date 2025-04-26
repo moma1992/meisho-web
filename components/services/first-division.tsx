@@ -6,16 +6,16 @@ import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Truck, Shield, ArrowRight } from 'lucide-react';
+import { Recycle, Truck, ArrowRight } from 'lucide-react';
 
 const services = [
   {
     icon: Truck,
     title: "建設機械運搬",
-    description: "20tトレーラーによる安全確実な輸送",
+    description: "3tユニック〜30tトレーラーまで豊富な方法での輸送",
   },
   {
-    icon: Shield,
+    icon: Truck,
     title: "安全性の確保",
     description: "徹底した安全管理体制",
   },

@@ -14,7 +14,7 @@ const services = [
   {
     icon: Truck,
     title: "建設機械運搬",
-    description: "20tトレーラーによる安全確実な輸送",
+    description: "3tユニック〜30tトレーラーまで豊富な方法での輸送",
   },
   {
     icon: Shield,
@@ -42,18 +42,23 @@ export function FirstDivisionContent() {
                 <h1 className="text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)] sm:text-5xl">
                   第一事業部
                 </h1>
-                <p className="mt-4 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
-                  建設機械の専門的な知識と経験を活かし、迅速かつ安全な輸送サービスを提供します。
-                  お客様のプロジェクトを成功へと導くパートナーとして、最適なソリューションを提案します。
-                </p>
                 
-                <p className="mt-8 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
-                  3tユニック〜30tトレーラーまで多様な車両を保有し、あらゆるお客様のニーズに柔軟にお応えします。
-                </p>
-                
-                <p className="mt-4 text-lg text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.5)]">
-                  回送サービスの一環として、状況に応じて建設機械のお預かりの対応も行なっております。
-                </p>
+                <Card className="mt-4 overflow-hidden bg-black/40 backdrop-blur-sm">
+                  <CardContent className="p-6">
+                    <p className="text-pretty text-lg leading-relaxed text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+                      建設機械の専門的な知識と経験を活かし、迅速かつ安全な輸送サービスを提供します。
+                      お客様のプロジェクトを成功へと導くパートナーとして、最適なソリューションを提案します。
+                    </p>
+                    
+                    <p className="mt-4 text-lg text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+                      3tユニック〜30tトレーラーまで多様な車両を保有し、あらゆるお客様のニーズに柔軟にお応えします。
+                    </p>
+                    
+                    <p className="mt-4 text-lg text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+                      回送サービスの一環として、状況に応じて建設機械のお預かりの対応も行なっております。
+                    </p>
+                  </CardContent>
+                </Card>
               </motion.div>
 
               <div className="mt-12 grid gap-4">

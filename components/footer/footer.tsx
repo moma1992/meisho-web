@@ -105,13 +105,6 @@ export function Footer() {
             <h3 className="text-xl font-semibold text-white">スプレッドグリーン</h3>
             <div className="space-y-2">
               <div className="flex items-start space-x-3">
-                <Clock className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
-                <div className="space-y-1">
-                  <p>月〜水,金〜日　11:00〜18:00</p>
-                  <p className="text-sm text-gray-300">木曜日定休日</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
                 <MapPin className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
                 <p className="text-sm">〒594-1105 大阪府和泉市のぞみ野１丁目１２−３４</p>
               </div>
@@ -139,13 +132,6 @@ export function Footer() {
           >
             <h3 className="text-xl font-semibold text-white">jewelry&jail</h3>
             <div className="space-y-2">
-              <div className="flex items-start space-x-3">
-                <Clock className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
-                <div className="space-y-1">
-                  <p>月〜水,金〜日　20:00〜24:00</p>
-                  <p className="text-sm text-gray-300">(lo23:30) 木曜日定休日</p>
-                </div>
-              </div>
               <div className="flex items-start space-x-3">
                 <Instagram className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
                 <a 

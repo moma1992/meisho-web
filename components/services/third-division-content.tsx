@@ -105,25 +105,6 @@ export function ThirdDivisionContent() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
           </div>
         </div>
-
-        {/* ダンプトラック画像セクション */}
-        <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="mx-auto max-w-4xl overflow-hidden rounded-lg shadow-xl"
-          >
-            <div className="relative aspect-video w-full">
-              <Image
-                src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/danpu.jpeg"
-                alt="産業廃棄物収集用ダンプトラック"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </motion.div>
-        </div>
       </div>
       <Footer />
     </>

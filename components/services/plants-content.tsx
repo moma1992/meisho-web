@@ -171,127 +171,127 @@ export function PlantsContent() {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="mt-16"
           >
-            <h2 className="mb-8 text-2xl font-bold text-center text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">提携ショップ</h2>
-            
-            {/* SpreadGreen Information */}
-            <Card className="overflow-hidden border-2 border-green-100/20 mb-8 bg-black/40 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
-                  <div className="relative h-40 w-40 overflow-hidden rounded-lg">
-                    <Image
-                      src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/grennline.jpg"
-                      alt="SpreadGreen"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="flex-1 space-y-4 text-center md:text-left">
-                    <h3 className="text-2xl font-bold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">スプレッドグリーン</h3>
-                    <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
-                      <MapPin className="h-5 w-5 shrink-0 text-white" />
-                      <p className="text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
-                        〒594-1105 大阪府和泉市のぞみ野１丁目１２−３４
-                      </p>
+            <div className="grid gap-8 md:grid-cols-2">
+              {/* SpreadGreen Information */}
+              <Card className="overflow-hidden border-2 border-green-100/20 bg-black/40 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
+                    <div className="relative h-40 w-40 overflow-hidden rounded-lg">
+                      <Image
+                        src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/grennline.jpg"
+                        alt="SpreadGreen"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
-                      <Phone className="h-5 w-5 shrink-0 text-white" />
-                      <p className="text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
-                        0725-99-8815
-                      </p>
-                    </div>
-                    <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
-                      <Instagram className="h-5 w-5 shrink-0 text-white" />
-                      <a
-                        href="https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ=="
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white hover:underline drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
-                      >
-                        @spreadgreen_
-                      </a>
-                    </div>
-                    <div className="flex justify-center md:justify-start">
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="group border-white/20 hover:border-white/50 hover:bg-white/10 text-white"
-                      >
+                    <div className="flex-1 space-y-4 text-center md:text-left">
+                      <h3 className="text-2xl font-bold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">スプレッドグリーン</h3>
+                      <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
+                        <MapPin className="h-5 w-5 shrink-0 text-white" />
+                        <p className="text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+                          〒594-1105 大阪府和泉市のぞみ野１丁目１２−３４
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
+                        <Phone className="h-5 w-5 shrink-0 text-white" />
+                        <p className="text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+                          0725-99-8815
+                        </p>
+                      </div>
+                      <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
+                        <Instagram className="h-5 w-5 shrink-0 text-white" />
                         <a
                           href="https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ=="
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2"
+                          className="text-white hover:underline drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
                         >
-                          <Instagram className="h-4 w-4" />
-                          Instagramをフォロー
-                          <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                          @spreadgreen_
                         </a>
-                      </Button>
+                      </div>
+                      <div className="flex justify-center md:justify-start">
+                        <Button
+                          asChild
+                          variant="outline"
+                          className="group border-white/20 hover:border-white/50 hover:bg-white/10 text-white"
+                        >
+                          <a
+                            href="https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ=="
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2"
+                          >
+                            <Instagram className="h-4 w-4" />
+                            Instagramをフォロー
+                            <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-            
-            {/* Jewelry & Jail Information */}
-            <Card className="overflow-hidden border-2 border-purple-100/20 bg-black/40 backdrop-blur-sm">
-              <CardContent className="p-6">
-                <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
-                  <div className="relative h-40 w-40 overflow-hidden rounded-lg">
-                    <Image
-                      src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/j-rogo.jpg"
-                      alt="Jewelry & Jail Logo"
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="flex-1 space-y-4 text-center md:text-left">
-                    <h3 className="text-2xl font-bold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">jewelry&jail</h3>
-                    <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
-                      <Instagram className="h-5 w-5 shrink-0 text-white" />
-                      <a
-                        href="https://www.instagram.com/jewelry_jail?igsh=cGFlNGRndGUxdG45"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-white hover:underline drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
-                      >
-                        @jewelry_jail
-                      </a>
+                </CardContent>
+              </Card>
+              
+              {/* Jewelry & Jail Information */}
+              <Card className="overflow-hidden border-2 border-purple-100/20 bg-black/40 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
+                    <div className="relative h-40 w-40 overflow-hidden rounded-lg">
+                      <Image
+                        src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/j-rogo.jpg"
+                        alt="Jewelry & Jail Logo"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                    <div className="flex justify-center md:justify-start">
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="group border-white/20 hover:border-white/50 hover:bg-white/10 text-white"
-                      >
+                    <div className="flex-1 space-y-4 text-center md:text-left">
+                      <h3 className="text-2xl font-bold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">jewelry&jail</h3>
+                      <div className="flex flex-col items-center gap-2 md:flex-row md:items-start">
+                        <Instagram className="h-5 w-5 shrink-0 text-white" />
                         <a
                           href="https://www.instagram.com/jewelry_jail?igsh=cGFlNGRndGUxdG45"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2"
+                          className="text-white hover:underline drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
                         >
-                          <Instagram className="h-4 w-4" />
-                          Instagramをフォロー
-                          <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                          @jewelry_jail
                         </a>
-                      </Button>
+                      </div>
+                      <div className="flex justify-center md:justify-start">
+                        <Button
+                          asChild
+                          variant="outline"
+                          className="group border-white/20 hover:border-white/50 hover:bg-white/10 text-white"
+                        >
+                          <a
+                            href="https://www.instagram.com/jewelry_jail?igsh=cGFlNGRndGUxdG45"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2"
+                          >
+                            <Instagram className="h-4 w-4" />
+                            Instagramをフォロー
+                            <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
+                          </a>
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                
-                {/* Add the menu image below */}
-                <div className="mt-6">
-                  <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-                    <Image
-                      src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/j-menu.jpg"
-                      alt="Jewelry & Jail Menu"
-                      fill
-                      className="object-cover"
-                    />
+                  
+                  {/* Add the menu image below */}
+                  <div className="mt-6">
+                    <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+                      <Image
+                        src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/j-menu.jpg"
+                        alt="Jewelry & Jail Menu"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </motion.div>
 
           <motion.div
