@@ -38,7 +38,7 @@ const positions = [
       "建設機械運搬の経験者歓迎",
       "安全意識が高く、責任感のある方",
     ],
-    image: "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&q=80&w=1200",
+    image: "https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/bigtruck2.jpg?auto=format&fit=crop&q=80&w=1200",
   },
   {
     title: "搬入•搬出スタッフ",
@@ -50,7 +50,7 @@ const positions = [
       "体力に自信のある方",
       "コミュニケーション能力の高い方",
     ],
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1200",
+    image: "https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/hero.jpg?auto=format&fit=crop&q=80&w=1200",
   },
   {
     title: "フローリスト",
