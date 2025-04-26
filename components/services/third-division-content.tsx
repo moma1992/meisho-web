@@ -96,7 +96,7 @@ export function ThirdDivisionContent() {
           <div className="absolute inset-0 lg:relative lg:col-start-2">
             <div className="absolute inset-0 bg-black/40 backdrop-blur-[8px] lg:hidden" />
             <Image
-              src="/images/third-div-bg.jpg"
+              src="/images/damp2.jpg"
               alt="産業廃棄物収集運搬"
               fill
               className="object-cover"

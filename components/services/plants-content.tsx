@@ -178,7 +178,7 @@ export function PlantsContent() {
                   <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
                     <div className="relative h-40 w-40 overflow-hidden rounded-lg">
                       <Image
-                        src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/grennline.jpg"
+                        src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/spread.png"
                         alt="SpreadGreen"
                         fill
                         className="object-cover"
