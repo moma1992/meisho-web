@@ -129,7 +129,7 @@ export function FirstDivisionContent() {
           >
             <div className="relative aspect-video w-full">
               <Image
-                src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/track-kitchen.jpeg"
+                src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/bigtruck.jpg"
                 alt="建設機械輸送トラック"
                 fill
                 className="object-cover"
