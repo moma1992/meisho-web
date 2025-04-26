@@ -38,7 +38,7 @@ const positions = [
       "建設機械運搬の経験者歓迎",
       "安全意識が高く、責任感のある方",
     ],
-    image: "https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/bigtruck2.jpg?auto=format&fit=crop&q=80&w=1200",
+    image: "https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/bigtruck.jpg?auto=format&fit=crop&q=80&w=1200",
   },
   {
     title: "搬入•搬出スタッフ",
