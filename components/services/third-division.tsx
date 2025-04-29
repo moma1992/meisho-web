@@ -92,7 +92,7 @@ export function ThirdDivision() {
         <div className="absolute inset-0 lg:relative lg:col-start-2">
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[8px] lg:hidden" />
           <Image
-            src="/images/third-div-bg.jpg"
+            src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/S__92184712_0.jpg"
             alt="産業廃棄物収集運搬"
             fill
             className="object-cover"

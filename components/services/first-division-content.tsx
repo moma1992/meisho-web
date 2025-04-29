@@ -86,10 +86,27 @@ export function FirstDivisionContent() {
                 ))}
               </div>
 
+              {/* Truck image moved here */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="mt-8 overflow-hidden rounded-lg shadow-xl"
+              >
+                <div className="relative aspect-video w-full">
+                  <Image
+                    src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/bigtruck2.jpeg"
+                    alt="建設機械輸送トラック"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </motion.div>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
                 className="mt-8"
               >
                 <Button
@@ -109,7 +126,7 @@ export function FirstDivisionContent() {
           <div className="absolute inset-0 lg:relative lg:col-start-2">
             <div className="absolute inset-0 bg-black/40 backdrop-blur-[8px] lg:hidden" />
             <Image
-              src="/images/first-div-bg.jpg"
+              src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/S__92184717_0.jpg"
               alt="建設機械の輸送"
               fill
               className="object-cover"
@@ -117,25 +134,6 @@ export function FirstDivisionContent() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
           </div>
-        </div>
-
-        {/* トラック画像セクション */}
-        <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-            className="mx-auto max-w-4xl overflow-hidden rounded-lg shadow-xl"
-          >
-            <div className="relative aspect-video w-full">
-              <Image
-                src="https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/bigtruck.jpg"
-                alt="建設機械輸送トラック"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </motion.div>
         </div>
       </div>
       <Footer />

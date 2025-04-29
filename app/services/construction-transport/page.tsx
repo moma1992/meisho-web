@@ -13,7 +13,7 @@ const ConstructionTransportPage = () => {
           <div 
             className="absolute inset-0 w-full h-full bg-cover bg-center"
             style={{
-              backgroundImage: 'url("/images/first-div-bg.jpg")',
+              backgroundImage: 'url("https://raw.githubusercontent.com/moma1992/meisho-web/main/public/images/S__92184717_0.jpg")',
             }}
           />
           <div className="absolute inset-0 bg-black/60" />
