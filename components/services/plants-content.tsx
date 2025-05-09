@@ -203,12 +203,12 @@ export function PlantsContent() {
                           <div className="flex items-center gap-2">
                             <Instagram className="h-5 w-5 shrink-0 text-white" />
                             <a
-                              href="https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ=="
+                              href="https://www.instagram.com/spreadgreen_studio?igsh=MTN2bzNvMXkzNWp0ZQ=="
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-white hover:underline drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
                             >
-                              @spreadgreen_
+                              @spreadgreen_studio
                             </a>
                           </div>
                         </div>
@@ -219,7 +219,7 @@ export function PlantsContent() {
                             className="group border-white/20 hover:border-white/50 hover:bg-white/10 text-white"
                           >
                             <a
-                              href="https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ=="
+                              href="https://www.instagram.com/spreadgreen_studio?igsh=MTN2bzNvMXkzNWp0ZQ=="
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex items-center gap-2"

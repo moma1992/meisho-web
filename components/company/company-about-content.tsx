@@ -50,8 +50,8 @@ const affiliatedShops = [
     title: "スプレッドグリーン",
     address: "〒594-1105 大阪府和泉市のぞみ野１丁目１２−３４",
     tel: "0725-99-8815",
-    instagram: "@spreadgreen_",
-    instagramUrl: "https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ==",
+    instagram: "@spreadgreen_studio",
+    instagramUrl: "https://www.instagram.com/spreadgreen_studio?igsh=MTN2bzNvMXkzNWp0ZQ==",
   },
   {
     title: "jewelry&jail",

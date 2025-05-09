@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, MapPin, Phone, Printer, Facebook, Twitter, Instagram, Truck, Clock } from 'lucide-react';
+import { Mail, MapPin, Phone, Printer, Instagram, Truck, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -12,8 +12,6 @@ const contactInfo = {
 };
 
 const socialLinks = [
-  { name: 'Facebook', icon: Facebook, href: '#' },
-  { name: 'Twitter', icon: Twitter, href: '#' },
   { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/meisho.inc/' },
 ];
 
@@ -41,20 +39,16 @@ export function Footer() {
             <p className="text-sm text-gray-300">
               産業基盤整備・都市づくりで地域社会に貢献する企業として
             </p>
-            <div className="flex justify-center space-x-4 md:justify-start">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    className="rounded-full bg-blue-900 p-2 transition-colors hover:bg-blue-800"
-                    aria-label={social.name}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </a>
-                );
-              })}
+            <div className="flex items-center gap-2">
+              <Instagram className="h-5 w-5 shrink-0 text-blue-400" />
+              <a
+                href="https://www.instagram.com/meisho.inc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:underline drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]"
+              >
+                @meisho.inc
+              </a>
             </div>
           </motion.div>
 
@@ -115,12 +109,12 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <Instagram className="mt-1 h-5 w-5 shrink-0 text-blue-400" />
                 <a 
-                  href="https://www.instagram.com/spreadgreen_?igsh=MTN2bzNvMXkzNWp0ZQ=="
+                  href="https://www.instagram.com/spreadgreen_studio?igsh=MTN2bzNvMXkzNWp0ZQ=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm hover:text-blue-400 transition-colors"
                 >
-                  @spreadgreen_
+                  @spreadgreen_studio
                 </a>
               </div>
             </div>
